@@ -1,0 +1,163 @@
+ {
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required": false,
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "config": {
+          "type": "object"
+        },
+        "course": {
+          "type": "object",
+          "properties": {
+            "_bookmarking": {
+              "type": "object",
+              "required": false,
+              "legend": "Marcadores",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "required": true,
+                  "default": true,
+                  "title": "¿Activar?",
+                  "inputType": "Checkbox",
+                  "validators": [],
+                  "help": "Controla si la extensión de marcadores está habilitada o deshabilitada."
+                },
+                "_level": {
+                  "type": "string",
+                  "required": true,
+                  "title": "Nivel para el marcador",
+                  "enum": [
+                    "page",
+                    "block",
+                    "component"
+                  ],
+                  "default": "component",
+                  "title": "Nivel",
+                  "inputType": {
+                    "type": "Select",
+                    "options": [
+                      {"val": "page", "label": "página"},
+                      {"val": "block", "label": "bloque"},
+                      {"val": "component", "label": "componente"}
+                    ]
+                  },
+                  "validators": ["required"],
+                  "help": "Le permite establecer si la creación de marcadores se realiza a nivel de página, bloque o componente."
+                },
+                "_showPrompt": {
+                  "type": "boolean",
+                  "required": true,
+                  "default": true,
+                  "title": "Mostrar aviso",
+                  "inputType": "Checkbox",
+                  "validators": [],
+                  "help": "Controla si la solicitud de marcadores está habilitada o deshabilitada. Si no está habilitado, el usuario volverá a su posición marcada automáticamente."
+                },
+                "title": {
+                  "type": "string",
+                  "default": "Marcadores",
+                  "required": false,
+                  "title": "Título de aviso",
+                  "inputType": "Text",
+                  "validators": [],
+                  "translatable": true
+                },
+                "body": {
+                  "type": "string",
+                  "default": "¿Te gustaría continuar donde lo dejaste?",
+                  "required": false,
+                  "title": "Contenido del aviso",
+                  "inputType": "Text",
+                  "validators": [],
+                  "translatable": true
+                },
+                "_buttons": {
+                  "type": "object",
+                  "title": "Botones del aviso",
+                  "properties": {
+                    "yes": {
+                      "type": "string",
+                      "default": "Si",
+                      "title": "Si",
+                      "inputType": "Text",
+                      "validators": [],
+                      "translatable": true
+                    },
+                    "no": {
+                      "type": "string",
+                      "default": "No",
+                      "title": "No",
+                      "inputType": "Text",
+                      "validators": [],
+                      "translatable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "contentobject": {
+          "type": "object",
+          "properties": {
+            "_bookmarking": {
+              "type": "object",
+              "required": false,
+              "legend": "Marcadores",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "required": true,
+                  "default": true,
+                  "title": "¿Activar?",
+                  "inputType": "Checkbox",
+                  "validators": [],
+                  "help": "Controla si Marcadores está habilitado o deshabilitado para esta página del curso."
+                },
+                "_level": {
+                  "type": "string",
+                  "required": true,
+                  "title": "",
+                  "enum": [
+                    "inherit",
+                    "page",
+                    "block",
+                    "component"
+                  ],
+                  "default": "inherit",
+                  "title": "Nivel",
+                  "inputType": {
+                    "type": "Select",
+                    "options": [
+                      {"val": "inherit", "label": "heredado"},
+                      {"val": "page", "label": "página"},
+                      {"val": "block", "label": "bloque"},
+                      {"val": "component", "label": "componente"}
+                    ]
+                  },
+                  "validators": ["required"],
+                  "help": "Si desea heredar la configuración de 'Nivel' de la configuración del proyecto o anularla para esta página del curso. Le permite establecer si la creación de marcadores se realiza a nivel de página, bloque o componente."
+                }
+              }
+            }
+          }
+        },
+        "article": {
+          "type": "object"
+        },
+        "block": {
+          "type": "object"
+        },
+        "component": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "adapt-contrib-bookmarking",
+  "version": "10.0.0",
+  "framework": ">=5.19.1",
+  "homepage": "https://github.com/wtechsas/adapt-contrib-bookmarking",
+  "bugs": "https://github.com/wtechsas/adapt-contrib-bookmarking/issues",
+  "extension" : "bookmarking",
+  "displayName" : "Marcadores",
+  "description": "Una extensión que rastrea la ubicación del alumno en el curso para que pueda devolverlo a esa ubicación en una sesión posterior.",
+  "main": "/js/adapt-contrib-bookmarking.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPL-3.0",
+  "targetAttribute": "_bookmarking"
+}

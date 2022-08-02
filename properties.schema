@@ -118,7 +118,7 @@
                   "title": "¿Activar?",
                   "inputType": "Checkbox",
                   "validators": [],
-                  "help": "Controla si Marcadores está habilitado o deshabilitado para esta página del curso."
+                  "help": "Controla si Marcadores está habilitado o deshabilitado para esta página del Recurso."
                 },
                 "_level": {
                   "type": "string",
@@ -142,7 +142,7 @@
                     ]
                   },
                   "validators": ["required"],
-                  "help": "Si desea heredar la configuración de 'Nivel' de la configuración del proyecto o anularla para esta página del curso. Le permite establecer si la creación de marcadores se realiza a nivel de página, bloque o componente."
+                  "help": "Si desea heredar la configuración de 'Nivel' de la configuración del proyecto o anularla para esta página del Recurso. Le permite establecer si la creación de marcadores se realiza a nivel de página, bloque o componente."
                 }
               }
             }

@@ -66,6 +66,7 @@
                   "title": "Título de aviso",
                   "inputType": "Text",
                   "validators": [],
+                  "help": "Corresponde al título del aviso que observara el usuario.",
                   "translatable": true
                 },
                 "body": {
@@ -75,11 +76,13 @@
                   "title": "Contenido del aviso",
                   "inputType": "Text",
                   "validators": [],
+                  "help": "Indica el contenido que observa el usuario en el marcador.",
                   "translatable": true
                 },
                 "_buttons": {
                   "type": "object",
                   "title": "Botones del aviso",
+                  "help": "Corresponde al texto que tendrá los botones del aviso.",
                   "properties": {
                     "yes": {
                       "type": "string",
@@ -87,7 +90,8 @@
                       "title": "Si",
                       "inputType": "Text",
                       "validators": [],
-                      "translatable": true
+                      "translatable": true,
+                      "help": "Texto del botón con el que el usuario acepta el marcador."
                     },
                     "no": {
                       "type": "string",
@@ -95,7 +99,8 @@
                       "title": "No",
                       "inputType": "Text",
                       "validators": [],
-                      "translatable": true
+                      "translatable": true,
+                      "help": "Texto del botón con el que el usuario rechaza el marcador."
                     }
                   }
                 }
